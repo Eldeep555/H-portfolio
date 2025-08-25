@@ -7,25 +7,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <header class="hero d-flex flex-column justify-content-center align-items-center text-center">
-    <img src="my_pro.photo.jpg" alt="Hassan Eldeep" class="profile-photo">
-    <h1 class="fw-bold mt-3">Hassan Eldeep</h1>
-    <p class="lead">Cybersecurity Student | Front-End Developer | Python Enthusiast | Team Leader</p>
-
-    <!-- Social Links -->
-    <div class="social-links mt-3">
-      <a href="https://github.com/Eldeep555" target="_blank" class="me-3"><i class="bi bi-github"></i></a>
-      <a href="https://www.linkedin.com/in/Hassan-Eldeeb" target="_blank" class="me-3"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.facebook.com/share/195xoUUTKc/" target="_blank"><i class="bi bi-facebook"></i></a>
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Hassan Eldeep</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero d-flex flex-column justify-content-center align-items-center text-center" data-aos="fade-down" data-aos-duration="1500" style="padding-top:80px;">
+    <img src="my_pro.photo.jpg" alt="Hassan Eldeep" class="profile-photo">
+    <h1 class="fw-bold mt-3" data-aos="zoom-in" data-aos-delay="300">Hassan Eldeep</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="600">
+      Cybersecurity Student | Front-End Developer | Python Enthusiast | Team Leader
+    </p>
+    <a href="#contact" class="btn btn-warning mt-4 fw-bold shadow-lg" data-aos="flip-up" data-aos-delay="900">
+      Contact Me
+    </a>
   </header>
 
   <!-- About -->
-  <section id="about" class="py-5">
+  <section id="about" class="py-5" data-aos="fade-right" data-aos-duration="1200">
     <div class="container text-center">
       <h2 class="fw-bold mb-4">About Me</h2>
       <p class="mx-auto col-lg-8">
@@ -38,11 +58,11 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-5 bg-light">
+  <section id="skills" class="py-5 bg-light" data-aos="fade-left" data-aos-duration="1200">
     <div class="container">
       <h2 class="fw-bold text-center mb-4">Skills</h2>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <p>HTML</p>
           <div class="progress mb-3"><div class="progress-bar bg-success" style="width:90%"></div></div>
 
@@ -53,7 +73,7 @@
           <div class="progress mb-3"><div class="progress-bar bg-warning" style="width:75%"></div></div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
           <p>Bootstrap</p>
           <div class="progress mb-3"><div class="progress-bar bg-primary" style="width:85%"></div></div>
 
@@ -69,51 +89,67 @@
 
   <!-- Projects -->
   <section id="projects" class="py-5">
-    <div class="container">
-      <h2 class="fw-bold text-center mb-5">Projects</h2>
-      <div class="row g-4">
-
-        <!-- To-Do List Project -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100 text-center">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-aos="flip-up">Projects</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card shadow-sm h-100">
             <div class="card-body">
-              <i class="bi bi-list-check fa-3x text-primary mb-3"></i>
-              <h5 class="card-title">To-Do List App</h5>
-              <p class="card-text">A simple, clean task manager built with HTML, CSS, and JavaScript.</p>
-              <a href="https://eldeep555.github.io/todo-list/" class="btn btn-primary" target="_blank">View Project</a>
+              <h5 class="card-title">✅ To-Do List</h5>
+              <p class="card-text">A simple and interactive to-do list web app to manage daily tasks.</p>
+              <a href="https://eldeep555.github.io/todo-list/" target="_blank" class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>
-
-        <!-- Live Clock Project -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card shadow-sm h-100 text-center">
+        <div class="col-md-5 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card shadow-sm h-100">
             <div class="card-body">
-              <i class="bi bi-clock-history fa-3x text-success mb-3"></i>
-              <h5 class="card-title">Live Clock</h5>
-              <p class="card-text">A real-time digital clock showing hours, minutes, and seconds dynamically.</p>
-              <a href="https://eldeep555.github.io/live-clock/" class="btn btn-success" target="_blank">View Project</a>
+              <h5 class="card-title">⏰ Live Clock</h5>
+              <p class="card-text">A digital live clock showing real-time updates with smooth UI.</p>
+              <a href="https://eldeep555.github.io/live-clock/" target="_blank" class="btn btn-primary">View Project</a>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-5 text-center">
+  <section id="contact" class="py-5 text-center bg-light" data-aos="fade-up">
     <div class="container">
       <h2 class="fw-bold mb-4">Contact Me</h2>
-      <p>Email: <a href="mailto:hassanelddeep@yahoo.com">hassanelddeep@yahoo.com</a></p>
-      <p>Phone: <a href="tel:01555091952">01555091952</a></p>
+      <p class="mb-2">📧 <a href="mailto:hassanelddeep@yahoo.com">hassanelddeep@yahoo.com</a></p>
+      <p class="mb-2">📞 <a href="tel:01555091952">01555091952</a></p>
+      <p class="mb-2">💬 <a href="https://wa.me/201555091952" target="_blank">Chat on WhatsApp</a></p>
+      <p class="mb-2">🔗 <a href="https://www.linkedin.com/in/Hassan-Eldeeb" target="_blank">LinkedIn</a></p>
+      <p class="mb-2">🌐 <a href="https://github.com/Eldeep555" target="_blank">GitHub</a></p>
     </div>
   </section>
 
-  <footer class="text-center py-3 bg-dark text-light">
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-dark text-light">
+    <div class="social-links mb-3">
+      <a href="https://github.com/Eldeep555" target="_blank" class="me-3"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/Hassan-Eldeeb" target="_blank" class="me-3"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.facebook.com/share/195xoUUTKc/" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
+      <a href="https://wa.me/201555091952" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
     <p>© 2025 Hassan Eldeep</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Bootstrap & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS Animation Init -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+      offset: 120
+    });
+  </script>
 </body>
 </html>
+
+
