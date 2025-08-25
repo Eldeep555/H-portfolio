@@ -1,73 +1,60 @@
-/* General Body */
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #457b9d, #1d3557);
+  height: 100vh;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
   color: white;
+  padding: 40px 20px;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin: 20px 0 10px;
-  font-weight: bold;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* Profile Photo with Lighting Circle */
 .profile-photo {
   width: 160px;
   height: 160px;
-  object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #fff;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7),
-              0 0 40px rgba(69, 123, 157, 0.6),
-              0 0 60px rgba(69, 123, 157, 0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid white;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  animation: glow 3s infinite alternate;
+}
+@keyframes glow {
+  from { box-shadow: 0 0 10px #fff; }
+  to { box-shadow: 0 0 25px #ffdd57; }
 }
 
-.profile-photo:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9),
-              0 0 50px rgba(69, 123, 157, 0.9),
-              0 0 80px rgba(69, 123, 157, 1);
+/* Typing Effect */
+.typing-text {
+  overflow: hidden;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  animation: typing 4s steps(20, end), blink .75s step-end infinite;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+
+/* Buttons */
+.contact-btn { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }
 
-/* Section Titles */
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: bold;
-  color: #1d3557;
-}
-
-/* Skills Section */
-.progress {
-  height: 20px;
-}
-
+/* Skills Bars */
 .progress-bar {
-  background-color: #457b9d;
+  width: 0;
+  transition: width 2s ease-in-out;
 }
 
 /* Footer */
-footer {
-  background: #1d3557;
+footer .social-icons a {
+  font-size: 1.5rem;
   color: white;
-  padding: 20px;
-  text-align: center;
+  transition: transform 0.3s, color 0.3s;
+}
+footer .social-icons a:hover {
+  transform: scale(1.2) rotate(10deg);
+  color: #ffdd57;
 }
