@@ -1,13 +1,14 @@
-// Simple scroll animation (optional)
-const sections = document.querySelectorAll("section");
-const options = { threshold: 0.2 };
+// Init AOS
+AOS.init();
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate__fadeInUp");
+// Animate skill bars
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".progress-bar").forEach(bar => {
+    let value = bar.getAttribute("data-skill");
+    let barPos = bar.getBoundingClientRect().top;
+    let screenPos = window.innerHeight;
+    if (barPos < screenPos) {
+      bar.style.width = value + "%";
     }
   });
-}, options);
-
-sections.forEach(sec => observer.observe(sec));
+});
